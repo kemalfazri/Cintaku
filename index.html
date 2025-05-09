@@ -148,7 +148,18 @@
 
       typeNextLine();
     }
-  </script>
-  
+    <audio autoplay loop muted id="myAudio">
+  <source src="Music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  let myAudio = document.getElementById('myAudio');
+
+  // Unmute after user interaction (e.g., click)
+  document.addEventListener('click', () => {
+    myAudio.muted = false;
+    myAudio.play();  // In case it was paused by the browser
+  });
+</script>
 </body>
 </html>
