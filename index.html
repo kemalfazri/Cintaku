@@ -136,7 +136,10 @@
       document.getElementById('invitation').style.display = 'none';
       const container = document.getElementById('letterContainer');
       container.style.display = 'block';
-
+   // Start music playback after user clicks the button
+  const audio = new Audio('https://kemalfazri.github.io/Cintaku/Music.mp3');
+  audio.loop = true;
+  audio.play();
       let index = 0;
       function typeNextLine() {
         if (index >= lines.length) return;
